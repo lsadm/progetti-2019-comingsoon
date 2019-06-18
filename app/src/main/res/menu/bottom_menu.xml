@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/film"
+        android:id="@+id/filmFragment"
+        android:icon="@drawable/film" />
+    <item
+        android:title="@string/search"
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/search" />
+    <item
+        android:title="@string/cinema"
+        android:icon="@drawable/cinema"
+        android:enabled="true"
+        android:visible="true"
+        android:id="@+id/cinemaFragment" />
+</menu>

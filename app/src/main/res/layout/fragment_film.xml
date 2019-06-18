@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FilmFragment">
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/filmList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            tools:itemCount="5"
+            tools:listitem="@layout/film_item"/>
+    <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spinKit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            app:SpinKit_Color="@color/colorPrimary"
+            app:SpinKit_Style="CubeGrid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintBottom_toBottomOf="@+id/cinemaList"/>
+</FrameLayout>

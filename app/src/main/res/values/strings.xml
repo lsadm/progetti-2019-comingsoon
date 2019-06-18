@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CineMap</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="film">Film</string>
+    <string name="cinema">Cinema</string>
+    <string name="search">Search</string>
+    <string name="poster_del_film">Poster del film</string>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:id="@+id/frameLayout"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context=".CinemaFragment"
+                                             tools:layout_editor_absoluteY="81dp">
+    <TextView
+            android:text="Cap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView2" android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginTop="12dp" app:layout_constraintTop_toTopOf="parent"/>
+    <android.support.v7.widget.RecyclerView
+            android:layout_height="0dp"
+            android:id="@+id/cinemaList"
+            tools:listitem="@layout/cinema_item"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/capEditText"/>
+    <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/capEditText"
+            app:layout_constraintStart_toEndOf="@+id/textView2" android:layout_marginStart="4dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView2" android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spinKit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            app:SpinKit_Color="@color/colorPrimary"
+            app:SpinKit_Style="CubeGrid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintBottom_toBottomOf="@+id/cinemaList"/>
+</android.support.constraint.ConstraintLayout>

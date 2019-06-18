@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/filmFragment">
+    <fragment
+        android:id="@+id/filmFragment"
+        android:name="it.unicampania.cinemap.FilmFragment"
+        android:label="fragment_film"
+        tools:layout="@layout/fragment_film">
+
+        <action
+            android:id="@+id/action_filmFragment_to_searchFragment2"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_filmFragment_to_cinemaFragment"
+            app:destination="@id/cinemaFragment" />
+        <action
+            android:id="@+id/action_filmFragment_to_filmDetailFragment"
+            app:destination="@id/filmDetailFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/cinemaFragment"
+            android:name="it.unicampania.cinemap.CinemaFragment"
+            android:label="fragment_cinema"
+            tools:layout="@layout/fragment_cinema">
+        <action android:id="@+id/action_cinemaFragment_to_cinemaDetailFragment"
+                app:destination="@id/cinemaDetailFragment2"/>
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="it.unicampania.cinemap.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_filmDetailFragment"
+            app:destination="@id/filmDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmDetailFragment"
+        android:name="it.unicampania.cinemap.FilmDetailFragment"
+        android:label="fragment_film_detail"
+        tools:layout="@layout/fragment_film_detail">
+        <argument
+            android:name="movieId"
+            app:argType="integer" />
+    </fragment>
+    <fragment android:id="@+id/cinemaDetailFragment2" android:name="it.unicampania.cinemap.CinemaDetailFragment"
+              android:label="fragment_cinema_detail" tools:layout="@layout/fragment_cinema_detail">
+        <argument android:name="cinema" app:argType="it.unicampania.imdbapi.Cinema"/>
+    </fragment>
+</navigation>
